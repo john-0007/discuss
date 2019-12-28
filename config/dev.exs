@@ -7,13 +7,13 @@ use Mix.Config
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
 config :discuss, Discuss.Endpoint,
-  http: [port: 4000],
+  http: [port: 3000],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
-  watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin",
-                    cd: Path.expand("../", __DIR__)]]
-
+  watchers: [
+    node: ["node_modules/brunch/bin/brunch", "watch", "--stdin", cd: Path.expand("../", __DIR__)]
+  ]
 
 # Watch static and templates for browser reloading.
 config :discuss, Discuss.Endpoint,
@@ -36,8 +36,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :discuss, Discuss.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "johnjoseph",
+  password: "",
   database: "discuss_dev",
   hostname: "localhost",
   pool_size: 10
