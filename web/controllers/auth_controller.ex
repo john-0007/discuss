@@ -13,7 +13,8 @@ defmodule Discuss.AuthController do
 
   def signout(conn, _params) do
     conn
-    |> configure_session(drop: true)
+    |> put_flash(:info, "Successfully signout")
+    |> clear_session
     |> redirect(to: topic_path(conn, :index))
   end
 
