@@ -29,7 +29,7 @@ defmodule Discuss.Router do
 
   scope "/auth", Discuss do
     pipe_through(:browser)
-
+    put("/signout", AuthController, :signout)
     get("/:provider", AuthController, :request)
     get("/:provider/callback", AuthController, :callback)
   end
