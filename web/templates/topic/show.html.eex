@@ -1,0 +1,9 @@
+<h5><%= @topic.title %></h5>
+<div class="input-field">
+  <textarea class="materialize-textarea"></textarea>
+  <button class="btn">Add Comment</button>
+  <ul class="collection"></ul>
+</div>
+<script>
+  window.topicId = <%= @topic.id %>
+</script>
