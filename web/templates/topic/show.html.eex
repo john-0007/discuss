@@ -2,6 +2,7 @@
 <div class="input-field">
   <textarea class="materialize-textarea"></textarea>
   <button class="btn">Add Comment</button>
+  <ul class="collection"></ul>
 </div>
 <script>
   window.topicId = <%= @topic.id %>
